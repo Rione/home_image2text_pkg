@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+
+<launch>
+  <node pkg="home_image2text_pkg" name="i2t" type="main.py" required="true" output="screen" />
+</launch>
