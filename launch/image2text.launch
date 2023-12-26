@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 
 <launch>
+  <node name="usb_cam" pkg="usb_cam" type="usb_cam_node" output="screen" />
   <node pkg="home_image2text_pkg" name="i2t" type="main.py" required="true" output="screen" />
 </launch>
