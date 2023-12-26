@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import rospy
 from image2text import i2t
 from cv_bridge import CvBridge
@@ -7,8 +9,8 @@ from std_msgs.msg import String
 class i2t_node:
     def __init__(self):
         self.i2t = i2t()
-        self.sub = rospy.Subscriber("image_raw", Image, self.callback)
-        self.pub = rospy.Publisher("i2t_text", String, queue_size=1)
+        self.sub = rospy.Subscriber("/usb_cam/image_raw", Image, self.callback)
+        self.pub = rospy.Publisher("/i2t_text", String, queue_size=1)
 
     def callback(self, msg):
         bridge = CvBridge()
